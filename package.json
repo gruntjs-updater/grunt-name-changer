@@ -1,0 +1,51 @@
+{
+  "name": "grunt-name-changer",
+  "version": "0.1.0",
+  "description": "Batch rename files",
+  "keywords": [
+    "gruntplugin",
+    "rename",
+    "files",
+    "images",
+    "css",
+    "jpg",
+    "png",
+    "js",
+    "javascript",
+    "lowercase",
+    "capitalize",
+    "lettercase",
+    "organize",
+    "clean"
+  ],
+  "homepage": "https://github.com/ryanburgess/grunt-name-changer",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/grunt-name-changer/issues"
+  },
+  "author": {
+    "name": "Ryan Burgess",
+    "email": "rburgess@evernote.com",
+    "url": "http://ryanburgess.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanburgess/grunt-name-changer.git"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "moment": "^2.8.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "licenses": {
+    "type": "MIT"
+  }
+}
