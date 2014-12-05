@@ -1,6 +1,6 @@
 {
   "name": "grunt-name-changer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Batch rename files",
   "keywords": [
     "gruntplugin",

@@ -67,6 +67,7 @@ Default value: `lowercase`
 An option for changing the letter case of the file names.
 
 ## Release History
+* 0.1.1: Fix unecessary reference.
 * 0.1.0: Initial release.
 
 ## Contributing

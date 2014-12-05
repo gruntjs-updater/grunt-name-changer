@@ -11,12 +11,13 @@
 module.exports = function (grunt) {
   grunt.registerTask('name-changer', function(){
     var fs = require('fs'),
-      moment = require('moment'),
       options,
       reference,
       filetype,
       lettercase,
       spaces,
+      prepend,
+      append,
       filename,
       successful = 0,
       failed = 0;
@@ -25,7 +26,9 @@ module.exports = function (grunt) {
       reference: 'img/',
       filetype: ['**/*.png', '**/*.jpg', '**/*.gif'],
       lettercase: 'lowercase',
-      spaces: '-'
+      spaces: '-',
+      prepend: null,
+      append: null
     });
 
     String.prototype.toCapitalize = function() {
@@ -53,6 +56,15 @@ module.exports = function (grunt) {
             filename = filename.toCapitalize();
           }else if(options.lettercase === 'titlecase'){
             filename = filename.toTitleCase();
+          }
+
+          //prepend
+          if(options.prepend !== null){
+            filename = options.prepend + options.spaces + filename;
+          }
+          //append
+          if(options.append !== null){
+            filename = filename + options.spaces + options.append;
           }
           // update file name
           fs.rename(options.reference+file, options.reference+filename, null);
