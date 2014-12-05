@@ -66,7 +66,20 @@ Default value: `lowercase`
 
 An option for changing the letter case of the file names.
 
+#### prepend
+Type: `String`
+Default value: `null`
+
+Prepend a string to the file name.
+
+#### append
+Type: `String`
+Default value: `null`
+
+Append a string to the file name.
+
 ## Release History
+* 0.1.2: Ability to append and prepend a string to file names.
 * 0.1.1: Fix unecessary reference.
 * 0.1.0: Initial release.
 

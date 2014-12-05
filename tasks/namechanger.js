@@ -11,6 +11,7 @@
 module.exports = function (grunt) {
   grunt.registerTask('name-changer', function(){
     var fs = require('fs'),
+      path = require('path'),
       options,
       reference,
       filetype,
@@ -19,6 +20,7 @@ module.exports = function (grunt) {
       prepend,
       append,
       filename,
+      extension,
       successful = 0,
       failed = 0;
 
@@ -60,11 +62,15 @@ module.exports = function (grunt) {
 
           //prepend
           if(options.prepend !== null){
+            filename = filename.replace(path.extname(filename), '');
             filename = options.prepend + options.spaces + filename;
           }
           //append
           if(options.append !== null){
-            filename = filename + options.spaces + options.append;
+            extension = path.extname(filename);
+            filename = filename.replace(extension, '');
+            //filename = filename.replace('.', options.spaces + options.append + '.');
+            filename = filename + extension;
           }
           // update file name
           fs.rename(options.reference+file, options.reference+filename, null);
