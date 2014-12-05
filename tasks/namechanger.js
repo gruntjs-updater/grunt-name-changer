@@ -21,6 +21,7 @@ module.exports = function (grunt) {
       append,
       filename,
       extension,
+      remove,
       successful = 0,
       failed = 0;
 
@@ -29,6 +30,7 @@ module.exports = function (grunt) {
       filetype: ['**/*.png', '**/*.jpg', '**/*.gif'],
       lettercase: 'lowercase',
       spaces: '-',
+      remove: null,
       prepend: null,
       append: null
     });
@@ -49,6 +51,10 @@ module.exports = function (grunt) {
           successful++;
 
           filename = file.replace(/\-/g, options.spaces).replace(/\_/g, options.spaces).replace(/\ /g, options.spaces);
+
+          if(options.remove !== null){
+            filename = filename.replace(options.remove, '');
+          }
 
           if(options.lettercase === 'uppercase'){
             filename = filename.toUpperCase();
@@ -72,6 +78,7 @@ module.exports = function (grunt) {
             //filename = filename.replace('.', options.spaces + options.append + '.');
             filename = filename + extension;
           }
+
           // update file name
           fs.rename(options.reference+file, options.reference+filename, null);
         }catch (e) {

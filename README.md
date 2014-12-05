@@ -76,9 +76,14 @@ Prepend a string to the file name.
 Type: `String`
 Default value: `null`
 
+#### remove
+Type: `String`
+Default value: `null`
+
 Append a string to the file name.
 
 ## Release History
+* 0.1.3: Ability to remove a string from file names.
 * 0.1.2: Ability to append and prepend a string to file names.
 * 0.1.1: Fix unecessary reference.
 * 0.1.0: Initial release.
