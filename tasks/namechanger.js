@@ -53,7 +53,7 @@ module.exports = function (grunt) {
           filename = file.replace(/\-/g, options.spaces).replace(/\_/g, options.spaces).replace(/\ /g, options.spaces);
 
           if(options.remove !== null){
-            filename = filename.replace(options.remove, '');
+            filename = filename.replace(options.remove, '')
           }
 
           if(options.lettercase === 'uppercase'){
@@ -68,15 +68,13 @@ module.exports = function (grunt) {
 
           //prepend
           if(options.prepend !== null){
-            filename = filename.replace(path.extname(filename), '');
             filename = options.prepend + options.spaces + filename;
           }
           //append
+          extension = path.extname(filename);
           if(options.append !== null){
-            extension = path.extname(filename);
             filename = filename.replace(extension, '');
-            //filename = filename.replace('.', options.spaces + options.append + '.');
-            filename = filename + extension;
+            filename = filename + options.append + extension;
           }
 
           // update file name
