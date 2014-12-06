@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       options: {
         reference: 'img/',
         directory: ['**/*.png', '**/*.jpg', '**/*.gif'],
-        lettercase: 'lower',
+        lettercase: 'lowercase',
         spaces:'-'
       },
     }

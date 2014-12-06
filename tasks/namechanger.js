@@ -52,6 +52,9 @@ module.exports = function (grunt) {
 
           filename = file.replace(/\-/g, options.spaces).replace(/\_/g, options.spaces).replace(/\ /g, options.spaces);
 
+          extension = path.extname(filename);
+          filename = filename.replace(extension, '');
+
           if(options.remove !== null){
             filename = filename.replace(options.remove, '')
           }
@@ -71,14 +74,12 @@ module.exports = function (grunt) {
             filename = options.prepend + options.spaces + filename;
           }
           //append
-          extension = path.extname(filename);
           if(options.append !== null){
-            filename = filename.replace(extension, '');
             filename = filename + options.append + extension;
           }
 
           // update file name
-          fs.rename(options.reference+file, options.reference+filename, null);
+          fs.rename(options.reference+file, options.reference+filename + extension, null);
         }catch (e) {
           failed++;
           grunt.log.error('File "' + file + '" failed to rename.');
