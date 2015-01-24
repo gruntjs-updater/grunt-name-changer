@@ -83,6 +83,7 @@ Default value: `null`
 Append a string to the file name.
 
 ## Release History
+* 0.1.7: Add git ignore file.
 * 0.1.5: Small updates to documentation.
 * 0.1.4: Small bug fix for append and prepend.
 * 0.1.3: Ability to remove a string from file names.
