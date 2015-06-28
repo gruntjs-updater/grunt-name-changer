@@ -1,5 +1,6 @@
-Grunt Name Changer
-==================
+# Grunt Name Changer
+
+[![npm version](https://badge.fury.io/js/grunt-name-changer.svg)](http://badge.fury.io/js/grunt-name-changer) [![Build Status](https://travis-ci.org/ryanburgess/grunt-name-changer.svg?branch=master)](https://travis-ci.org/ryanburgess/grunt-name-changer)
 
 A Grunt task for batch renaming files.
 
