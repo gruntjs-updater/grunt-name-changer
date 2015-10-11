@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     String.prototype.toTitleCase = function () {
       return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     };
-    
+
     grunt.file.expand({
       filter: 'isFile',
         cwd: options.reference
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
           }
 
           // update file name
-          fs.rename(options.reference+file, options.reference+filename + extension, null);
+          fs.rename(options.reference + file, options.reference + filename + extension);
         }catch (e) {
           failed++;
           grunt.log.error('File "' + file + '" failed to rename.');
