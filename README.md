@@ -84,7 +84,7 @@ Default value: `null`
 Append a string to the file name.
 
 ## Release History
-* 0.1.8: Add git ignore file.
+* 0.1.8: Support Node.js 4.0.
 * 0.1.7: Add git ignore file.
 * 0.1.5: Small updates to documentation.
 * 0.1.4: Small bug fix for append and prepend.
